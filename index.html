@@ -10,7 +10,7 @@
 	<meta property="og:image" content="assets/imgs/logotipo.png">
 	<meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare sed augue non tempus.">
 	<meta property="og:title" content="CoreBiz Marketing Cognitivo & Omnichanel"">
-	<link rel="shortcut icon" href="assets/imgs/favicon.ico" />
+	<link rel="shortcut icon" type="image/ico" href="assets/imgs/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:400,600" rel="stylesheet">
 
@@ -186,7 +186,7 @@
 				 		<a href="#" class="product-description">
 				 			<img src="assets/imgs/product-1.jpg" alt="Lorem ipsum dolor sit amet" title="Lorem ipsum dolor sit amet">
 				 			<h3>legging faux leather sailor</h3>
-				 			<p><sub class="offer">r$ 70,00</sub>&nbsp;r$ 60,00</p>
+				 			<p><sub class="offer">r$ 70,00</span>&nbsp;r$ 60,00</p>
 				 			<p>3x de r$20,00</p>
 				 		</a>
 				 	</li>
@@ -280,8 +280,8 @@
 			request.open("POST", url, true);
 			request.setRequestHeader("Content-type", "application/json");
 			request.onreadystatechange = function () {
-				if (request.readyState === 4 && request.status === 200) {
-					console.log("Mensagem enviada com sucesso!");
+				if (request.status === 200) {
+					alert("Mensagem enviada com sucesso!");
 				}
 			};
 			var data = JSON.stringify({"name": nome, "email": email, "phone": phone, "notice": notice});
